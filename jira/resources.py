@@ -401,6 +401,8 @@ class Resource(object):
         :type raw: Dict[str, Any]
         """
         self.raw = raw
+        print("PARSING RAW OBJECT:")
+        print(str(raw))
         if not raw:
             raise NotImplementedError("We cannot instantiate empty resources: %s" % raw)
         dict2resource(raw, self, self._options, self._session)
